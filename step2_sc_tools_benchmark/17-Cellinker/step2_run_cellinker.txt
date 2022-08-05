@@ -1,0 +1,6 @@
+Species: Homo sapiens
+Meta file: /input/meta.txt
+Counts file: /input/count.zip
+Minimum ratio of gene expressed in a cell type: 0.1
+P-Value: 0.05
+Number of statistical iterations: 100
