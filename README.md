@@ -1,4 +1,4 @@
-![](/home/ljx/CCC-benchmark/Figure%203%20workflow.png)
+![](https://github.com/SunXQlab/ST-deconvoulution/blob/main/workflow.png)
 
 ## Introduction
 
