@@ -2,10 +2,8 @@
 
 ## Introduction
 
-We benchmark two types of CCC inference methods/tools, one is the methods predict LR pairs based on scRNA-seq
-data, and the other is the methods that can predict
-ligand/receiver-targets regulations. We use paired scRNA-seq and ST datasets of
-breast cancer as benchmark data.
+We benchmark two types of CCC inference methods/tools, one type of methods predict LR pairs based on scRNA-seq
+data, and another type of methods that can predict ligand/receiver-targets regulations. 
 
 For the first benchmark, scRNA-seq data is used as the input data for
 different tools to predict intercellular communication. We define a
