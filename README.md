@@ -1,4 +1,4 @@
-![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Workflow figure.tif)
+![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Workflow-figure.tif)
 
 ## Introduction
 
