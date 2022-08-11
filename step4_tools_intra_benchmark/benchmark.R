@@ -222,7 +222,7 @@ p2 <- ggplot(df_plot, aes(x=Dataset,y=PRC_AUC,fill=method)) +
   geom_bar(stat="identity",position=position_dodge(0.75),width=0.6) +
   scale_y_continuous(expand = c(0, 0.01)) + labs(y = 'AUCPRC') +
   coord_cartesian(ylim=c(-0.02,1.1))+
-  scale_fill_manual(values = mycolor_software, breaks=c('CytoTalk','NicheNet','MISTy','stMLnet', 'HoloNet')) + 
+  scale_fill_manual(values = mycolor_software, breaks=c('CytoTalk','NicheNet','stMLnet','MISTy', 'HoloNet')) + 
   theme_bar() + #coord_flip() +
   geom_text(aes(label=PRC_AUC_label),position=position_dodge(0.9),vjust = -0.5,size = 4) 
 p2

@@ -3,7 +3,7 @@ library(tidyr)
 set.seed(123)
 setwd('./step3_run_lr_benchmark/result/')
 
-## bench.st.handle.result.df.RData
+## handle result
 if(T){
   source('../code/bench.handle.R')
   files <- list.files(".")
@@ -13,7 +13,7 @@ if(T){
     results.names <- objects(pattern = "^bench")
     if(substring(results.names, 14) %in% c(4, 5, 13, 16)){
       results <- get(results.names)
-      results <- results$`0.4`
+      results <- results$`0.4` # change to 0.1, 0.2, 0.3, 0.4
       result.names <- names(results)
       for (res.name in result.names){
         fin.result <- list()
@@ -39,7 +39,7 @@ if(T){
     }else{
       fin.result <- list()
       result <- get(results.names)
-      result <- result$`0.4`
+      result <- result$`0.4` # change to 0.1, 0.2, 0.3, 0.4
       result <- imputation.na(result) %>% remove.auto() %>% 
         remove.null()
       

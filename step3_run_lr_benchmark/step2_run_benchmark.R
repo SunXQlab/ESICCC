@@ -128,8 +128,8 @@ if(T){
   
   bench.result.4 <- lapply(close_distant, function(cd){
     bench.result <- lapply(result.CellChat, function(res){
-      bench.result.para <- bench.ST(cd, norm.data, res)
-      bench.result.para
+      bench.result.tmp <- bench.ST(cd, norm.data, res)
+      bench.result.tmp
     })
     bench.result
   })
@@ -541,7 +541,7 @@ if(T){
   save(bench.result.19, file = "../step3_run_lr_benchmark/result/19_NATMI.RData")
 }
 
-# 20-iCELLNET
+# 20-ICELLNET
 if(T){
   # load and handle the result of iCELLNET in CID4465
   if(F){

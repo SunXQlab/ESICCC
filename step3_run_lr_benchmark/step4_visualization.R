@@ -7,7 +7,7 @@ load('./result.bench/result.benchmark.1.RData')
 if(F){
   # draw mutual information
   if(F){
-    data <- result.benchmark[grepl("^CellChat",result.benchmark$tool), ]
+    data <- result.benchmark[grepl("^CellChat_trun",result.benchmark$tool), ]
     p1 <- ggplot(data, aes(tool, mutinfo, fill=factor(groups))) + 
       geom_boxplot(outlier.shape = NA, lwd=0.5)+
       theme_bw()+
@@ -18,11 +18,11 @@ if(F){
       coord_cartesian(ylim=c(0,0.15))+
       ylab("Mutual information")+
       ggtitle("CellChat")+
-      scale_x_discrete("methods", labels = c("CellChat_trim" = "triM",
-                                             "CellChat_trun_05" = "trunM_05",
-                                             "CellChat_trun_10" = "trunM_10",
-                                             "CellChat_trun_15" = "trunM_15",
-                                             "CellChat_trun_20" = "trunM_20"))
+      scale_x_discrete("methods", labels = c("CellChat_trun_05" = "0.05",
+                                             "CellChat_trun_10" = "0.10",
+                                             "CellChat_trun_15" = "0.15",
+                                             "CellChat_trun_20" = "0.20",
+                                             "CellChat_trun_25" = "0.25"))
     p1
     #comparisons = my_comparisons
     data <- result.benchmark[grepl("^iTALK",result.benchmark$tool), ]
@@ -37,7 +37,9 @@ if(F){
       ylab("Mutual information")+
       ggtitle("iTALK")+
       scale_x_discrete("top_gene", labels = c("iTALK_10" = "10",
-                                              "iTALK_25" = "25",
+                                              "iTALK_20" = "20",
+                                              "iTALK_30" = "30",
+                                              "iTALK_40" = "40",
                                               "iTALK_50" = "50"))
     p2
     
@@ -60,7 +62,7 @@ if(F){
     p3
     data <- result.benchmark[grepl("^CellTalker",result.benchmark$tool), ]
     data$tool <- factor(data$tool,levels = c("CellTalker_0", "CellTalker_50", "CellTalker_100", "CellTalker_150",
-                                             "CellTalker_200", "CellTalker_250", "CellTalker_500"))
+                                             "CellTalker_200"))
     p4 <- ggplot(data, aes(tool, mutinfo, fill=factor(groups))) + 
       geom_boxplot(outlier.shape = NA, lwd = 0.5)+
       theme_bw()+
@@ -75,9 +77,7 @@ if(F){
                                                     "CellTalker_50" = "50",
                                                     "CellTalker_100" = "100",
                                                     "CellTalker_150" = "150",
-                                                    "CellTalker_200" = "200",
-                                                    "CellTalker_250" = "250",
-                                                    "CellTalker_500" = "500"))
+                                                    "CellTalker_200" = "200"))
     
     p4
     Rmisc::multiplot(p1, p3, p2, p4, cols = 2)
@@ -85,7 +85,7 @@ if(F){
   
   # draw pcc
   if(F){
-    data <- result.benchmark[grepl("^CellChat",result.benchmark$tool), ]
+    data <- result.benchmark[grepl("^CellChat_trun",result.benchmark$tool), ]
     data$pcc <- abs(data$pcc)
     p1 <- ggplot(data, aes(tool, pcc, fill=factor(groups))) + 
       geom_boxplot(outlier.shape = NA, lwd = 0.5)+
@@ -96,11 +96,11 @@ if(F){
       coord_cartesian(ylim=c(0,0.3))+
       ylab("Pearson correlation coefficient")+
       ggtitle("CellChat")+
-      scale_x_discrete("methods", labels = c("CellChat_trim" = "triM",
-                                             "CellChat_trun_05" = "trunM_05",
-                                             "CellChat_trun_10" = "trunM_10",
-                                             "CellChat_trun_15" = "trunM_15",
-                                             "CellChat_trun_20" = "trunM_20"))
+      scale_x_discrete("methods", labels = c("CellChat_trun_05" = "0.05",
+                                             "CellChat_trun_10" = "0.10",
+                                             "CellChat_trun_15" = "0.15",
+                                             "CellChat_trun_20" = "0.20",
+                                             "CellChat_trun_25" = "0.25"))
     p1
     
     data <- result.benchmark[grepl("^iTALK",result.benchmark$tool), ]
@@ -115,7 +115,9 @@ if(F){
       ylab("Pearson correlation coefficient")+
       ggtitle("iTALK")+
       scale_x_discrete("top_gene", labels = c("iTALK_10" = "10",
-                                              "iTALK_25" = "25",
+                                              "iTALK_20" = "20",
+                                              "iTALK_30" = "30",
+                                              "iTALK_40" = "40",
                                               "iTALK_50" = "50"))
     p2
     
@@ -140,7 +142,7 @@ if(F){
     data <- result.benchmark[grepl("^CellTalker",result.benchmark$tool), ]
     data$pcc <- abs(data$pcc)
     data$tool <- factor(data$tool,levels = c("CellTalker_0", "CellTalker_50", "CellTalker_100", "CellTalker_150",
-                                             "CellTalker_200", "CellTalker_250", "CellTalker_500"))
+                                             "CellTalker_200"))
     p4 <- ggplot(data, aes(tool, pcc, fill=factor(groups))) + 
       geom_boxplot(outlier.shape = NA, lwd = 0.5)+
       theme_bw()+
@@ -154,9 +156,7 @@ if(F){
                                                     "CellTalker_50" = "50",
                                                     "CellTalker_100" = "100",
                                                     "CellTalker_150" = "150",
-                                                    "CellTalker_200" = "200",
-                                                    "CellTalker_250" = "250",
-                                                    "CellTalker_500" = "500"))
+                                                    "CellTalker_200" = "200"))
     p4
     Rmisc::multiplot(p1, p3, p2, p4, cols = 2)
   }
@@ -165,9 +165,9 @@ if(F){
 #handle the result
 if(T){
   temp <- result.benchmark[!grepl("^CellChat.trun", result.benchmark$tool),]
-  temp <- temp[-which(temp$tool %in% c("iTALK_25", "iTALK_50")),]
+  temp <- temp[-which(temp$tool %in% c("iTALK_20", "iTALK_30", "iTALK_40", "iTALK_50")),]
   temp <- temp[-which(temp$tool %in% c("scSeqComm_0.7", "scSeqComm_0.6", "scSeqComm_0.9", "scSeqComm_0.5")),]
-  temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:12]),]
+  temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:10]),]
   temp$tool <- stringr::str_replace_all(temp$tool, "scSeqComm_0.8", "scSeqComm")
   temp$tool <- stringr::str_replace_all(temp$tool, "CellTalker_0", "CellTalker")
   temp$tool <- stringr::str_replace_all(temp$tool, "CellChat_trim", "CellChat")
@@ -220,9 +220,9 @@ if(T){
   
   if(T){
     temp <- result.benchmark[!grepl("^CellChat.trun", result.benchmark$tool),]
-    temp <- temp[-which(temp$tool %in% c("iTALK_25", "iTALK_50")),]
+    temp <- temp[-which(temp$tool %in% c("iTALK_20", "iTALK_30", "iTALK_40", "iTALK_50")),]
     temp <- temp[-which(temp$tool %in% c("scSeqComm_0.7", "scSeqComm_0.6", "scSeqComm_0.9", "scSeqComm_0.5")),]
-    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:12]),]
+    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:10]),]
     temp$tool <- stringr::str_replace_all(temp$tool, "scSeqComm_0.8", "scSeqComm")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellTalker_0", "CellTalker")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellChat_trim", "CellChat")
@@ -273,9 +273,9 @@ if(T){
   
   if(T){
     temp <- result.benchmark[!grepl("^CellChat.trun", result.benchmark$tool),]
-    temp <- temp[-which(temp$tool %in% c("iTALK_25", "iTALK_50")),]
+    temp <- temp[-which(temp$tool %in% c("iTALK_20", "iTALK_30", "iTALK_40", "iTALK_50")),]
     temp <- temp[-which(temp$tool %in% c("scSeqComm_0.7", "scSeqComm_0.6", "scSeqComm_0.9", "scSeqComm_0.5")),]
-    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:12]),]
+    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:10]),]
     temp$tool <- stringr::str_replace_all(temp$tool, "scSeqComm_0.8", "scSeqComm")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellTalker_0", "CellTalker")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellChat_trim", "CellChat")
@@ -326,9 +326,9 @@ if(T){
   
   if(T){
     temp <- result.benchmark[!grepl("^CellChat.trun", result.benchmark$tool),]
-    temp <- temp[-which(temp$tool %in% c("iTALK_25", "iTALK_50")),]
+    temp <- temp[-which(temp$tool %in% c("iTALK_20", "iTALK_30", "iTALK_40", "iTALK_50")),]
     temp <- temp[-which(temp$tool %in% c("scSeqComm_0.7", "scSeqComm_0.6", "scSeqComm_0.9", "scSeqComm_0.5")),]
-    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:12]),]
+    temp <- temp[-which(temp$tool %in% unique(temp$tool)[7:10]),]
     temp$tool <- stringr::str_replace_all(temp$tool, "scSeqComm_0.8", "scSeqComm")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellTalker_0", "CellTalker")
     temp$tool <- stringr::str_replace_all(temp$tool, "CellChat_trim", "CellChat")

@@ -6,7 +6,7 @@ set.seed(123)
 
 load("./step1_data_process/se_data/step2_scRNA_10X.RData")
 
-min.expression <-c(0, 50, 100, 150, 200, 250, 500)
+min.expression <-c(0, 50, 100, 150, 200)
 
 ## Run celltalker
 result.celltalker <- lapply(min.expression, function(min.expr){

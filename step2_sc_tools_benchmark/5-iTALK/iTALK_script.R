@@ -6,7 +6,7 @@ set.seed(123)
 
 load("./step1_data_process/se_data/step2_scRNA_10X.RData")
 
-result.iTALK <- lapply(c(10, 25, 50), function(top_genes){
+result.iTALK <- lapply(c(10, 20, 30, 40, 50), function(top_genes){
   matrix.sc <- GetAssayData(se.sc, "data", "RNA")
   matrix.sc <- as.matrix(matrix.sc)
   matrix.sc <- as.data.frame(t(matrix.sc))
@@ -27,6 +27,6 @@ result.iTALK <- lapply(c(10, 25, 50), function(top_genes){
   res
 })
 
-names(result.iTALK) <- c(10, 25, 50)
+names(result.iTALK) <- c(10, 20, 30, 40, 50)
 
 save(result.iTALK, file = './step2_sc_tools_benchmark/5-iTALK/result.iTALK.RData')
