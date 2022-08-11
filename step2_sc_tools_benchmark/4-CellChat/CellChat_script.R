@@ -31,8 +31,10 @@ cellchat.trun15 <- computeCommunProb(cellchat, type = "truncatedMean", trim = 0.
   filterCommunication(., min.cells = 10) %>% subsetCommunication(.)
 cellchat.trun20 <- computeCommunProb(cellchat, type = "truncatedMean", trim = 0.20) %>%
   filterCommunication(., min.cells = 10) %>% subsetCommunication(.)
+cellchat.trun25 <- computeCommunProb(cellchat, type = "truncatedMean", trim = 0.25) %>%
+  filterCommunication(., min.cells = 10) %>% subsetCommunication(.)
 result.CellChat <- list(trim = cellchat.trim, trun_05 = cellchat.trun05, 
                         trun_10 = cellchat.trun10, trun_15 = cellchat.trun15, 
-                        trun_20 = cellchat.trun20)
+                        trun_20 = cellchat.trun20, trun_25 = cellchat.trun25)
 
 save(result.CellChat, file = './step2_sc_tools_benchmark/4-CellChat/result.CellChat.RData')
