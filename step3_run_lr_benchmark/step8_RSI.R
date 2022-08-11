@@ -94,6 +94,7 @@ if(F){
   rm(result_CytoTalk)
   result.CytoTalk$rank <- rank(result.CytoTalk$cost)
   save(result.CytoTalk, file = '../tools_result_for_rsi/CytoTalk.result.RData')
+  rm(result.CytoTalk)
   
   # Connectome
   load('./Connectome_result.RData')
