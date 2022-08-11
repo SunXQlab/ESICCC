@@ -73,7 +73,7 @@ if(F){
   rm(result.ICELLNET)
   
   # CytoTalk
-  load("~/CCC-benchmark-2022.8.9/step2_sc_tools_benchmark/7-CytoTalk/result.CytoTalk.RData")
+  load("~/CCC-benchmark/step2_sc_tools_benchmark/7-CytoTalk/result.CytoTalk.RData")
   result_CytoTalk[["CAFs-CAFs"]] <- NULL
   result_CytoTalk <- lapply(result_CytoTalk, function(res){res$pcst$final_network})
   result_CytoTalk <- do.call(rbind, result_CytoTalk)
