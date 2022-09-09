@@ -25,7 +25,7 @@ the differentially expressed genes (DEGs) in each cell line perturbation dataset
 ligand/receptor-targets regulations. The score of
 ligand/receptor-targets predicted by different tools were compared to
 the differential expression status (DGEs or not DEGs) of corresponding
-targets to calculate AUCROC and AUCPR.
+targets to calculate AUROC and AUPRC.
 
 ## Workflow
 
