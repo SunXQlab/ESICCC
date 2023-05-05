@@ -1,5 +1,3 @@
-![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Workflow-figure.png)
-
 ## Introduction
 
 We benchmark two types of CCC inference methods, one type of methods predict LR pairs based on scRNA-seq data, and another type of methods that can predict ligand/receptor-targets regulations. 
@@ -9,7 +7,7 @@ For the first benchmark, we evaluated the accuracy, stability and usability of 1
 For the second benchmark, 8 ST datasets were used as the input for 5 LR-Targets inference tools to predict ligand/receptor-targets regulations, and the cell line perturbation datasets were used for evaluation, involving knockout/mutant conditions for 5 receptors, and treatment conditions for 10 ligands. And the differentially expressed genes (DEGs) in each cell line perturbation dataset, were used as the ground truth of ligand/receptor-targets regulations. The score of ligand/receptor-targets predicted by different tools were compared to the differential expression status (DGEs or not DEGs) of corresponding targets to calculate AUROC and AUPRC. In addition, we also record the running time and maximum memory usage of methods in all the ST datasets. 
 
 ## Workflow
-
+![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Workflow-figure.png)  
 -   **Step0\_LRToolsFunction** contains the R/Python/Shell scripts that pacakage the running code of 19 methods with Seurat objects as input into function.  
 -   **Step1\_LRPredictionResult** contains the R/Shell scripts to run 19 methods for inferring LR pairs from the 14 scRNA-seq datasets.  
 -   **Step2\_PreSTForLRBench** contains the R scripts to get the different ratios (e.g.top 10%, 20%, 30%, 40%) of cell type specific close and distant cell pairs in each dataset for the preparation of the benchmarking using mutual infomation.  
