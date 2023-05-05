@@ -24,11 +24,7 @@ For the second benchmark, 8 ST datasets were used as the input for 5 LR-Targets 
 ## Datasets
 -   **scRNA-seq and ST datasets**   
 
-<style>
-    table {
-        text-align: center;
-    }
-</style>
+
 <body>
     <table border="1" cellspacing="1" width="900">
         <thead>
@@ -97,11 +93,7 @@ For the second benchmark, 8 ST datasets were used as the input for 5 LR-Targets 
   
 -   **Cell line perturbation datasets**  
 
-<style>
-    table {
-        text-align: center;
-    }
-</style>
+
 <body>
     <table border="1" cellspacing="1" width="900">
         <thead>
