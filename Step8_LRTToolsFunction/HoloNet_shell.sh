@@ -1,0 +1,2 @@
+source /home/ljx/miniconda3/bin/activate HoloNet
+/home/ljx/miniconda3/envs/HoloNet/bin/python ~/2-CCC-benchmark-202204-202208/CCC-benchmark-202212/Script/Step8_LRTToolsFunction/HoloNet.py $1 $2 $3 $4 $5
