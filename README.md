@@ -9,7 +9,7 @@ For the second benchmark, 8 ST datasets were used as the input for 5 LR-Targets 
 
 ## Workflow
 ![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Workflow-figure.png)  
--   **Step0\_LRToolsFunction** contains the R/Python/Shell scripts that pacakage the running code of 19 methods with Seurat objects as input into function.  
+-   **Step0\_LRToolsFunction** contains the R/Python/Shell scripts that package the running code of 19 methods with Seurat objects as input into function.  
 -   **Step1\_LRPredictionResult** contains the R/Shell scripts to run 19 methods for inferring LR pairs from the 14 scRNA-seq datasets.  
 -   **Step2\_PreSTForLRBench** contains the R scripts to get the different ratios (e.g.top 10%, 20%, 30%, 40%) of cell type specific close and distant cell pairs in each dataset for the preparation of the benchmarking using mutual infomation.  
 -   **Step3\_MIForLRBench** contains the R scripts to calculate MI of LR interactions predicted by methods in the different ratios of cell type specific close and distant groups and calculate DLRC index of methods in each dataset.  
