@@ -9,7 +9,7 @@ set.seed(123)
 # process proteomics data
 if(F){
   proteinGroup <- fread('~/1-Datasets/Proteomics_28/Data/proteinGroups.txt')
-  pep <- proteinGroup[, c(7,13:280)]
+  pep <- proteinGroup[, c(7,549:816)]
   rm(proteinGroup); gc()
   
   pep <- pep[which(pep$Gene.names != ''), ]
