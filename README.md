@@ -1,4 +1,4 @@
-![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Graphic-abstrct.tif)  
+![](https://github.com/SunXQlab/CCC-Benchmark/blob/main/Graphic-abstrct.png)  
 ## Introduction
 
 We benchmark two types of CCC inference methods, one type of methods predict LR pairs based on scRNA-seq data, and another type of methods that can predict ligand/receptor-targets regulations. 
