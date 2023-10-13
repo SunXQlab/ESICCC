@@ -178,3 +178,8 @@ For the second benchmark, 8 ST datasets were used as the input for 5 LR-Targets 
 -   stMLnet (R, version: 0.1.0)
 -   MISTy (R, version: 1.3.8)
 -   HoloNet (Python, version: 0.0.5)
+
+## Citation
+
+Please cite ESICCC as follows:
+Luo J, Deng M, Zhang X, Sun X*. ESICCC as a systematic computational framework for evaluation, selection and integration of cell-cell communication inference methods. Genome Research. 2023. doi: 10.1101/gr.278001.123
